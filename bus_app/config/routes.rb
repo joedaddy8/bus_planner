@@ -2,6 +2,8 @@ BusApp::Application.routes.draw do
   get "plan_route/ptp"
   get "plan_route/bstbs"
   get "plan_route/saved_searches"
+
+  match '/search', to: 'plan_route#search', via: [:get] 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

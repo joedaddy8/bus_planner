@@ -1,0 +1,40 @@
+<h1>Search Result: Route Found!</h1>
+
+<p><b>Source</b><br>
+<%= @params[:street] %>, <%= @params[:city] %>, <%= @params[:state] %> <%= @params[:zipcode] %></p>
+<p><b>Destination</b><br>
+<%= @params[:to_street] %>, <%= @params[:to_city] %>, <%= @params[:to_state] %> <%= @params[:to_zipcode] %></p>
+
+<%= button_to "Make Another Search", :back, method: :get %>
+<br><br>
+
+<h2>Directions</h2>
+<table border style="float:left;">
+  <tr>
+    <th>Route Name</th>
+    <th>Description</th>
+    <th>Timeframe</th>
+  </tr>
+  <tr>
+    <td>Walking</td>
+    <td>Walk to the Studio Arts Building</td>
+    <td>12 minutes</td>
+  </tr>
+  <tr>
+    <td>Route 32</td>
+    <td>Get on the bus at the Lederle Graduate Research Center</td>
+    <td>8 minutes</td>
+  </tr>
+  <tr>
+    <td>Walking</td>
+    <td>Walk to 61 Pine Street</td>
+    <td>5 minutes</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><b>Total Time</b></td>
+    <td>25 Minutes</td>
+  </tr>
+</table>
+
+<%= image_tag("map_image_2.png", width: '650', style: "position:relative;float:right;") %>
