@@ -2,28 +2,32 @@
 
 
 <%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:street, "Street") %>
+  <br>
+  <h3>Origin</h3>
+  <%= label_tag(:street, " Street: ") %>
   <%= text_field_tag(:street) %>
   
-  <%= label_tag(:city, "City") %>
+  <%= label_tag(:city, " City: ") %>
   <%= text_field_tag(:city) %>
 
-  <%= label_tag(:state, "State") %>
+  <%= label_tag(:state, " State: ") %>
   <%= select_tag(:state, options_for_select([["Alabama"],["Alaska"],["Arizona"],["Arkansas"],["California"],["Colorado"],["Connecticut"],["Delaware"],["Florida"]])) %>
 
-  <%= label_tag(:zipcode, "Zipcode") %>
+  <%= label_tag(:zipcode, " Zipcode: ") %>
   <%= text_field_tag(:zipcode) %>
   <br>
-  <%= label_tag(:to_street, "Street") %>
+  <br>
+  <h3>Destination</h3>
+  <%= label_tag(:to_street, " Street: ") %>
   <%= text_field_tag(:to_street) %>
   
-  <%= label_tag(:to_city, "City") %>
+  <%= label_tag(:to_city, " City: ") %>
   <%= text_field_tag(:to_city) %>
 
-  <%= label_tag(:to_state, "State") %>
+  <%= label_tag(:to_state, " State: ") %>
   <%= select_tag(:to_state, options_for_select([["Alabama"],["Alaska"],["Arizona"],["Arkansas"],["California"],["Colorado"],["Connecticut"],["Delaware"],["Florida"]])) %>
 
-  <%= label_tag(:to_zipcode, "Zipcode") %>
+  <%= label_tag(:to_zipcode, " Zipcode: ") %>
   <%= text_field_tag(:to_zipcode) %>
   <br>
 
