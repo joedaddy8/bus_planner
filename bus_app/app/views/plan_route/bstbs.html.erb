@@ -1,2 +1,26 @@
-<h1>PlanRoute#bstbs</h1>
-<p>Find me in app/views/plan_route/bstbs.html.erb</p>
+<h1>Bus Stop to Bus Stop Travel</h1>
+
+
+<%= form_tag("/search", method: "get") do %>
+  <h3>Origin</h3>
+  <%= label_tag(:route, "Route") %>
+  <%= text_field_tag(:route) %>
+  
+  <%= label_tag(:bus_stop, "Bus Stop") %>
+  <%= text_field_tag(:bus_stop) %>
+  <br>
+  <h3>Destination</h3>
+  <%= label_tag(:to_route, "Route") %>
+  <%= text_field_tag(:to_route) %>
+
+  <%= label_tag(:to_bus_stop, "Bus Stop") %>
+  <%= text_field_tag(:to_bus_stop) %>
+  <br>
+  <br>
+
+  <%= submit_tag("Search") %>
+
+
+<% end %>
+
+
