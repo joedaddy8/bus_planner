@@ -21,4 +21,10 @@ $( document ).ready(function() {
     $("#stop_message").addClass("hidden");
     $("#lgrc_results").removeClass("hidden");
   });
+
+  $("#stop_search").on("click", function(e) {
+    e.preventDefault();
+    $("#stop_message").addClass("hidden");
+    $("#lgrc_results").removeClass("hidden");
+  });
 });
