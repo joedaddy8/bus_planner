@@ -1,80 +1,95 @@
 <h1>Search Result: Route Found!</h1>
 
 <% if @params[:street].nil? %>
-  <p><b>Source</b><br>
-  <%= @params[:route] %>, <%= @params[:bus_stop] %>
-  <p><b>Destination</b><br>
-  <%= @params[:to_route] %>, <%= @params[:to_bus_stop] %>
+  <div style="width:100%;border:1px solid black;">
+    <div style="width:45%;float:left;padding:5px;">
+      <p><b>Source:</b> Studio Arts Building
+      <p><b>Destination:</b> North Amherst<br>
 
-<%= button_to "Make Another Search", :back, method: :get %>
-<br>
-<%= button_to "Schedule an Alert", new_alarm_url, method: :get %>
-<br><br>
+      <h2>Directions</h2>
+      <table border style="float:left;">
+        <tr>
+          <th>Route Name</th>
+          <th>Description</th>
+          <th>Time of Bus Arrival</th>
+        </tr>
+        <tr>
+          <td>Route 32<br>Route 45<br>Route 31</td>
+          <td>Get on the bus at the The Studio Arts Building</td>
+          <td>12:32 PM</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Get off at North Amherst Bus stop</td>
+          <td>12:38 PM</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><b>Total Time</b></td>
+          <td>6 Minutes</td>
+        </tr>
+      </table>
 
-<h2>Directions</h2>
-<table border style="float:left;">
-  <tr>
-    <th>Route Name</th>
-    <th>Description</th>
-    <th>Time of Bus Arrival</th>
-  </tr>
-  <tr>
-    <td>Route 32<br>Route 45<br>Route 31</td>
-    <td>Get on the bus at the The Studio Arts Building</td>
-    <td>12:32 PM</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Get off at North Amherst Bus stop</td>
-    <td>12:38 PM</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><b>Total Time</b></td>
-    <td>6 Minutes</td>
-  </tr>
-</table>
-
-<%= image_tag("bstbs.png", width: '400', style: "position:relative;float:right;") %>
+      <br><br>
+      <%= button_to "Make Another Search", :back, method: :get %>
+      <%= button_to "Schedule an Alert", new_alarm_url, method: :get %>
+    </div>
+    <div style="width:45%;float:left;padding:5px;border-left:1px solid black">
+      <h2>Route 31, 32, 45</h2>
+      <%= image_tag("bstbs.png", width: '400', style: "margin-left:auto;margin-right:auto") %>
+    </div>
+    <br style="clear:both;line-height:0" />
+  </div>
 
 
 <% else %>
-  <p><b>Source</b><br>
-  <%= @params[:street] %>, <%= @params[:city] %>, <%= @params[:state] %> <%= @params[:zipcode] %></p>
-  <p><b>Destination</b><br>
-  <%= @params[:to_street] %>, <%= @params[:to_city] %>, <%= @params[:to_state] %> <%= @params[:to_zipcode] %></p>
-<%= button_to "Make Another Search", :back, method: :get %>
-<br><br>
+  <div style="width:100%;border:1px solid black;">
+    <div style="width:45%;border-right:1px solid black;float:left;padding:5px;">
+      <p><b>Source:</b> Studio Arts Building, Amherst MA, 01003<br>
+      <p><b>Destination:</b> 61 Pine St, Amherst MA, 01003<br>
 
-<h2>Directions</h2>
-<table border style="float:left;">
-  <tr>
-    <th>Route Name</th>
-    <th>Description</th>
-    <th>Timeframe</th>
-  </tr>
-  <tr>
-    <td>Walking</td>
-    <td>Walk to the Studio Arts Building</td>
-    <td>12 minutes</td>
-  </tr>
-  <tr>
-    <td>Route 32</td>
-    <td>Get on the bus at the Lederle Graduate Research Center</td>
-    <td>8 minutes</td>
-  </tr>
-  <tr>
-    <td>Walking</td>
-    <td>Walk to 61 Pine Street</td>
-    <td>5 minutes</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><b>Total Time</b></td>
-    <td>25 Minutes</td>
-  </tr>
-</table>
+      <h2>Directions</h2>
+      <table border style="float:left;">
+        <tr>
+          <th>Route Name</th>
+          <th>Description</th>
+          <th>Timeframe</th>
+        </tr>
+        <tr>
+          <td>Walking</td>
+          <td>Walk to the Studio Arts Building</td>
+          <td>12 minutes</td>
+        </tr>
+        <tr>
+          <td>Route 32</td>
+          <td>Get on the bus at the Lederle Graduate Research Center</td>
+          <td>8 minutes</td>
+        </tr>
+        <tr>
+          <td>Route</td>
+          <td>Get off the bus at North Amherst</td>
+          <td>6 minutes</td>
+        </tr>
+        <tr>
+          <td>Walking</td>
+          <td>Walk to 61 Pine Street</td>
+          <td>5 minutes</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><b>Total Time</b></td>
+          <td> Minutes</td>
+        </tr>
+      </table>
 
-<%= image_tag("map_image_2.png", width: '350', style: "position:relative;float:right;") %>
-
+      <br><br>
+      <%= button_to "Make Another Search", :back, method: :get %>
+      <%= button_to "Schedule an Alert", new_alarm_url, method: :get %>
+    </div>
+    <div style="width:45%;float:left;padding:5px;">
+      <h2>Route 31, 32, 45</h2>
+      <%= image_tag("map_image_2.png", width: '400', style: "margin-left:auto;margin-right:auto") %>
+    </div>
+    <br style="clear:both;line-height:0" />
+  </div>
 <% end %>
