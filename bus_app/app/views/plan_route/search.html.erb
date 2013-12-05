@@ -7,6 +7,8 @@
   <%= @params[:to_route] %>, <%= @params[:to_bus_stop] %>
 
 <%= button_to "Make Another Search", :back, method: :get %>
+<br>
+<%= button_to "Schedule an Alert", new_alarm_url, method: :get %>
 <br><br>
 
 <h2>Directions</h2>
