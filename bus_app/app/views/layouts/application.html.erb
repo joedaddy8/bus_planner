@@ -1,14 +1,62 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>BusApp</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="Bus Tracker" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="https://dl.dropboxusercontent.com/u/126050982/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://dl.dropboxusercontent.com/u/126050982/fonts.css" rel="stylesheet" type="text/css" media="all" />
 </head>
+
 <body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">UMASS Bus Tracker</a></h1>
+			<span>Bus Tracking Designed by <a href="linkToUsSomehow.com" rel="nofollow">Jordan Moore, Justin Ivy, Serkan Oran, Dan Barrington</a></span> </div>
+		</div>
+		<div id="triangle-up"></div>
+	</div>
+</div>
+<div id="menu-wrapper">
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="#" accesskey="1" title="">Point To Point</a></li>
+				<li><a href="#" accesskey="2" title="">Bus Stop to Bus Stop</a></li>
+				<li><a href="#" accesskey="3" title="">My Bus Routes</a></li>
+				<li><a href="#" accesskey="4" title="">Bus Info</a></li>
+			</ul>
+		</div>
+</div>
+<div id="wrapper">
+	<div id="featured-wrapper">
+	
+		<div class="extra2 container">
+			<div class="ebox1">
+				 <!-- <div class="hexagon"></div> -->
+				<div class="title">
+					<h2>Some Cool Headder For Dan</h2>
+					<span class="byline">Some Cool Undertext For Justin</span>
+				</div>
+				<p>Random <strong>WORDS</strong> Serkan can fill in. <a href="http://www.somelinktooursite.com" rel="nofollow">OMG A LINK</a>.</p>
+				<a href="#" class="button">COOL BUTTON HERE</a>
+				<!-- Insert Shit Here -->
+				<%= yield %>
+			</div>		
 
-<%= yield %>
+			<div class="ebox2">
+				<!--More Ruby Content Here Maybe -->
+			</div>		
 
+		</div>	
+
+	</div>
+</div>
+<div id="stamp" class="container">
+	<div class="hexagon"></div>
+</div>
 </body>
 </html>
