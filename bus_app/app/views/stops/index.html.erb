@@ -1,29 +1,33 @@
-<h2>Stop Information</h2>
+<h1 style="padding:20px">Stop Information</h1>
 
 <table style="border:1px solid black;margin-left:auto;margin-right:auto; width:100%">
   <tr>
     <td style="height:600px;border-right:1px solid black;width:50%;vertical-align:top;padding-top:5px">
-      <div><h3> Search for a stop </h3>
+      <div>
+        <h2 style="padding:20px"> Search for a stop </h2>
         <input type="text">
         <button type="submit" id="stop_search">Search</button>
       </div>
-      <hr>
+      <p style="padding:25px 0px 10px 0px;">or</p>
       <div>
-        <h3> Select a stop </h2>
+        <h2 style="padding:20px"> Select a stop </h2>
         <div style="text-align:left">
-          <div style="display:inline-block;width:40%;text-align:right">Route:</div>
+          <div style="display:inline-block;width:30%;text-align:right">Route:</div>
           <select>
+            <option>-- Please select a Route --</option>
             <option>30 – North Amherst / Old Belchertown Rd</option>
             <option>31 – Sunderland / South Amherst</option>
             <option>34 – Campus Shuttle Northbound</option>
-            <option>34 – Campus Shuttle Southbound</option>
+            <option>35 – Campus Shuttle Southbound</option>
             <option>Amity Shuttle / UMass</option>
             <option>45 – Belchertown Center / UMass</option>
           </select>
         </div>
-        <div>
-          <div style="display:inline-block;width:40%;text-align:right">Stop:</div>
-          <select>
+        <br>
+        <div style="text-align:left">
+          <div style="display:inline-block;width:30%;text-align:right">Stop:</div>
+          <select id="stop_select">
+            <option>-- Select a Route first --</option>
             <option>Arnold House</option>
             <option>LGRC</option>
             <option>Fine Arts Center</option>
@@ -33,7 +37,55 @@
       </div>
     </td>
     <td style="width:50%;vertical-align:top">
-      <h3>Please select a stop</h3>
+      <h3 id="stop_message">Please search for or select a stop</h3>
+      <div id="lgrc_results" class="hidden">
+        <h2 style="padding:20px">LGRC</h2>
+        <%= image_tag("lgrc.png") %>
+        <h3 style="padding:20px">Routes</h3>
+        <ul>
+          <li>30 – North Amherst / Old Belchertown Rd</li>
+          <li>31 – Sunderland / South Amherst</li>
+          <li>34 – Campus Shuttle Northbound</li>
+          <li>35 – Campus Shuttle Southbound</li>
+        <h3 style="padding:20px">Upcoming Buses</h3>
+        <table style="margin-left:auto;margin-right:auto;">
+          <tr>
+            <th>Route</th>
+            <th>Bus</th>
+            <th>Time of Arrival</th>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>3201</td>
+            <td>12:30pm</td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>3204</td>
+            <td>12:35pm</td>
+          </tr>
+          <tr>
+            <td>Shuttle - South</td>
+            <td>3308</td>
+            <td>12:39pm</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>3101</td>
+            <td>12:45pm</td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>3301</td>
+            <td>12:50pm</td>
+          </tr>
+          <tr>
+            <td>Shuttle - South</td>
+            <td>3203</td>
+            <td>12:54pm</td>
+          </tr>
+        </table>
+      </div>
     </td>
   </tr>
 </table>

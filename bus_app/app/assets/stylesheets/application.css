@@ -12,10 +12,6 @@
  *= require_tree .
  */
 
-table {
-  border:0px solid black;
-  border-spacing:0px;
-}
-td {
-  border:1px solid black;
-}
+ .hidden {
+  display:none;
+ }
