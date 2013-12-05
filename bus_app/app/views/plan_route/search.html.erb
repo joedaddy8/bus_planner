@@ -1,10 +1,46 @@
 <h1>Search Result: Route Found!</h1>
 
-<p><b>Source</b><br>
-<%= @params[:street] %>, <%= @params[:city] %>, <%= @params[:state] %> <%= @params[:zipcode] %></p>
-<p><b>Destination</b><br>
-<%= @params[:to_street] %>, <%= @params[:to_city] %>, <%= @params[:to_state] %> <%= @params[:to_zipcode] %></p>
+<% if @params[:street].nil? %>
+  <p><b>Source</b><br>
+  <%= @params[:route] %>, <%= @params[:bus_stop] %>
+  <p><b>Destination</b><br>
+  <%= @params[:to_route] %>, <%= @params[:to_bus_stop] %>
 
+<%= button_to "Make Another Search", :back, method: :get %>
+<br><br>
+
+<h2>Directions</h2>
+<table border style="float:left;">
+  <tr>
+    <th>Route Name</th>
+    <th>Description</th>
+    <th>Time of Bus Arrival</th>
+  </tr>
+  <tr>
+    <td>Route 32<br>Route 45<br>Route 31</td>
+    <td>Get on the bus at the The Studio Arts Building</td>
+    <td>12:32 PM</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Get off at North Amherst Bus stop</td>
+    <td>12:38 PM</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><b>Total Time</b></td>
+    <td>6 Minutes</td>
+  </tr>
+</table>
+
+<%= image_tag("bstbs.png", width: '650', style: "position:relative;float:right;") %>
+
+
+<% else %>
+  <p><b>Source</b><br>
+  <%= @params[:street] %>, <%= @params[:city] %>, <%= @params[:state] %> <%= @params[:zipcode] %></p>
+  <p><b>Destination</b><br>
+  <%= @params[:to_street] %>, <%= @params[:to_city] %>, <%= @params[:to_state] %> <%= @params[:to_zipcode] %></p>
 <%= button_to "Make Another Search", :back, method: :get %>
 <br><br>
 
@@ -38,3 +74,5 @@
 </table>
 
 <%= image_tag("map_image_2.png", width: '650', style: "position:relative;float:right;") %>
+
+<% end %>
