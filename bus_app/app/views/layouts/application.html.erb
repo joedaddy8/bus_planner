@@ -24,18 +24,18 @@
 <div id="menu-wrapper">
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1" title="">Point To Point</a></li>
-				<li><a href="#" accesskey="2" title="">Bus Stop to Bus Stop</a></li>
-				<li><a href="#" accesskey="3" title="">My Bus Routes</a></li>
-				<li><a href="#" accesskey="4" title="">Bus Info</a></li>
+        <li><%= link_to "Point to Point", {controller: "plan_route", action: "ptp"} %></li>
+        <li><%= link_to "Bus Stop to Bus Stop", {controller: "plan_route", action: "bstbs"} %></li>
+        <li><%= link_to "My Bus Routes", {controller: "plan_route", action: "saved_searches"} %></li>
+        <li><%= link_to "Bus Info", {controller: "plan_route", action: "saved_searches"} %></li>
 			</ul>
 		</div>
 </div>
 <div id="wrapper">
 	<div id="featured-wrapper">
 	
-		<div class="extra2 container">
-			<div class="ebox1">
+		<div class="extra2 container" >
+			<div class="ebox1" hidden>
 				 <!-- <div class="hexagon"></div> -->
 				<div class="title">
 					<h2>Some Cool Headder For Dan</h2>
@@ -44,11 +44,11 @@
 				<p>Random <strong>WORDS</strong> Serkan can fill in. <a href="http://www.somelinktooursite.com" rel="nofollow">OMG A LINK</a>.</p>
 				<a href="#" class="button">COOL BUTTON HERE</a>
 				<!-- Insert Shit Here -->
-				<%= yield %>
 			</div>		
 
+				<%= yield %>
 			<div class="ebox2">
-				<!--More Ruby Content Here Maybe -->
+
 			</div>		
 
 		</div>	
