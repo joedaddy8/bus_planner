@@ -4,17 +4,46 @@
 <%= form_tag("/search", method: "get") do %>
   <h3>Origin</h3>
   <%= label_tag(:route, "Route") %>
-  <%= text_field_tag(:route) %>
+  <select id="route">
+  <option value="">Select</option>
+  <option value="43">Blue 32</option>
+  <option value="">Blue 4</option>
+  <option value="">Blue 23</option>
+  <option value="">Green 30</option>
+  <option value="">Green 45</option>
+  <option value="">Green 46</option>
+</select>
   
   <%= label_tag(:bus_stop, "Bus Stop") %>
-  <%= text_field_tag(:bus_stop) %>
+  <select>
+  <option value="">Select</option>
+  <option value="">Studio Arts Building</option>
+  <option value="">Hampshire Mall</option>
+  <option value="">Umass Haigis Mall</option>
+  <option value="">Amherst College</option>
+</select>
   <br>
   <h3>Destination</h3>
   <%= label_tag(:to_route, "Route") %>
-  <%= text_field_tag(:to_route) %>
+  <select>
+  <option value="">Select</option>
+  <option value="43">Blue 32</option>
+  <option value="">Blue 4</option>
+  <option value="">Blue 23</option>
+  <option value="">Green 30</option>
+  <option value="">Green 45</option>
+  <option value="">Green 46</option>
+</select>
 
   <%= label_tag(:to_bus_stop, "Bus Stop") %>
-  <%= text_field_tag(:to_bus_stop) %>
+  <select>
+  <option value="">Select</option>
+  <option value="">North Amherst</option>
+  <option value="">Graduate Research Center</option>
+  <option value="">Cushman Center</option>
+  <option value="">South Amherst Common</option>
+  <option value="">Atkin's Corner</option>
+</select>
   <br>
   <br>
 

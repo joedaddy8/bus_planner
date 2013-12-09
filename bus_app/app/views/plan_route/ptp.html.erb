@@ -2,10 +2,12 @@
 
 
 <%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:street, "Street") %>
+  <br>
+  <h3>Origin</h3>
+  <%= label_tag(:street, " Street: ") %>
   <%= text_field_tag(:street) %>
   
-  <%= label_tag(:city, "City") %>
+  <%= label_tag(:city, " City: ") %>
   <%= text_field_tag(:city) %>
 
   <%= label_tag(:state, "State") %>
@@ -63,13 +65,15 @@
   <option value="WY">Wyoming</option>
 </select>
 
-  <%= label_tag(:zipcode, "Zipcode") %>
+  <%= label_tag(:zipcode, " Zipcode: ") %>
   <%= text_field_tag(:zipcode) %>
   <br>
-  <%= label_tag(:to_street, "Street") %>
+  <br>
+  <h3>Destination</h3>
+  <%= label_tag(:to_street, " Street: ") %>
   <%= text_field_tag(:to_street) %>
   
-  <%= label_tag(:to_city, "City") %>
+  <%= label_tag(:to_city, " City: ") %>
   <%= text_field_tag(:to_city) %>
 
   <%= label_tag(:to_state, "State") %>
@@ -127,7 +131,7 @@
   <option value="WY">Wyoming</option>
 </select>
 
-  <%= label_tag(:to_zipcode, "Zipcode") %>
+  <%= label_tag(:to_zipcode, " Zipcode: ") %>
   <%= text_field_tag(:to_zipcode) %>
   <br>
 
