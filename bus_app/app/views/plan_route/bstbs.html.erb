@@ -1,53 +1,62 @@
 <h1>Bus Stop to Bus Stop Travel</h1>
 
+<div style="border:1px solid black; width:100%;">
+  <%= form_tag("/search", method: "get") do %>
 
-<%= form_tag("/search", method: "get") do %>
-  <h3>Origin</h3>
-  <%= label_tag(:route, "Route") %>
-  <select id="route">
-  <option value="">Select</option>
-  <option value="43">Blue 32</option>
-  <option value="">Blue 4</option>
-  <option value="">Blue 23</option>
-  <option value="">Green 30</option>
-  <option value="">Green 45</option>
-  <option value="">Green 46</option>
-</select>
-  
-  <%= label_tag(:bus_stop, "Bus Stop") %>
-  <select>
-  <option value="">Select</option>
-  <option value="">Studio Arts Building</option>
-  <option value="">Hampshire Mall</option>
-  <option value="">Umass Haigis Mall</option>
-  <option value="">Amherst College</option>
-</select>
-  <br>
-  <h3>Destination</h3>
-  <%= label_tag(:to_route, "Route") %>
-  <select>
-  <option value="">Select</option>
-  <option value="43">Blue 32</option>
-  <option value="">Blue 4</option>
-  <option value="">Blue 23</option>
-  <option value="">Green 30</option>
-  <option value="">Green 45</option>
-  <option value="">Green 46</option>
-</select>
+    <div style="float:left;width:45%;text-align:left">
+      <h3 style="text-align:center">Origin</h3>
+      <br><br>
+      <div style="display:inline-block;width:30%;text-align:right">Route:</div>
+      <select id="route">
+        <option value="">Select</option>
+        <option value="43">Blue 32</option>
+        <option value="">Blue 4</option>
+        <option value="">Blue 23</option>
+        <option value="">Green 30</option>
+        <option value="">Green 45</option>
+        <option value="">Green 46</option>
+      </select>
+      
+      <br>
+      <div style="display:inline-block;width:30%;text-align:right">Stop:</div>
+      <select>
+        <option value="">Select</option>
+        <option value="">Studio Arts Building</option>
+        <option value="">Hampshire Mall</option>
+        <option value="">Umass Haigis Mall</option>
+        <option value="">Amherst College</option>
+      </select>
+    </div>
+    <div style="width:10%;float:left;text-align:center">To</div>
+    <div style="float:right;width:45%;text-align:left">
+      <h3 style="text-align:center">Destination</h3>
+      <br><br>
+      <div style="display:inline-block;width:30%;text-align:right">Route:</div>
+      <select>
+        <option value="">Select</option>
+        <option value="43">Blue 32</option>
+        <option value="">Blue 4</option>
+        <option value="">Blue 23</option>
+        <option value="">Green 30</option>
+        <option value="">Green 45</option>
+        <option value="">Green 46</option>
+      </select>
 
-  <%= label_tag(:to_bus_stop, "Bus Stop") %>
-  <select>
-  <option value="">Select</option>
-  <option value="">North Amherst</option>
-  <option value="">Graduate Research Center</option>
-  <option value="">Cushman Center</option>
-  <option value="">South Amherst Common</option>
-  <option value="">Atkin's Corner</option>
-</select>
-  <br>
-  <br>
+      <br>
+      <div style="display:inline-block;width:30%;text-align:right">Stop:</div>
+      <select>
+        <option value="">Select</option>
+        <option value="">North Amherst</option>
+        <option value="">Graduate Research Center</option>
+        <option value="">Cushman Center</option>
+        <option value="">South Amherst Common</option>
+        <option value="">Atkin's Corner</option>
+      </select>
+    </div>
 
-  <%= submit_tag("Search") %>
+    <div style="display: block; clear: both;height:50px;"></div>
+    <div style="vertical-align:bottom"><%= submit_tag("Search") %></div>
+</div>
 
 
 <% end %>
