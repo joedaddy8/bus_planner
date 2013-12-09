@@ -39,4 +39,6 @@
   border: 1px solid #666;
   color: white;
   text-decoration:none;
+  margin:5px;
+  cursor: pointer;
  }
