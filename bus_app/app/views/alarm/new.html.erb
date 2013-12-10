@@ -1,70 +1,65 @@
-<h1 style="padding:20px">Schedule an Alarm</h1>
+<h1 style="padding:20px">Schedule an Alert</h1>
 <table style="border:1px solid black;margin-left:auto;margin-right:auto; width:100%">
   <tr>
    <td style="height:400px;border-right:1px solid black;width:50%;vertical-align:top;padding-top:5px">
    	<br>
    	<h2>Bus Schedule Information</h2>
+      <%= @alarm.date%>
    	   	<br>
    		<br>
 
-   		<h3>Route: 45</h3>
-   		<br>
-   		<h3>Bus Stop: LGRC</h3>
-   		<br>
-   		<h3>Bus Arrival Time: 12:30 P.M.</h3>
-   		<br>
+         <p><b>Source:</b> Route 32, Studio Arts Building</p>
+         <p><b>Destination:</b> Route 32, North Amherst</p>
+         <p><b>Bus Arrival Time:</b> 12:32 P.M.</h3>
+         <br>
    		<%= button_to "Back", :back, method: :get %>
    </td>
    <td style="width:50%;vertical-align:top">
-   	<br>
-   	<div>
-   		<h3>Alarm Frequency</h3>
+      <%= form_for(@alarm, url: alarm_index_path) do |f|%>	 
+       <br>
+        <div>
+          <h3>Alert Frequency</h3>
 
-   		<br>
-   		
-   		<%= label_tag("Once:")%>
-   		<%=radio_button_tag("Alarm Frequency", 0, checked = true) %>
-   		<%= label_tag("Weekly:")%>
-   		<%=radio_button_tag("Alarm Frequency", 7) %>
-   		<%= label_tag("Bi-Weekly:")%>
-   		<%=radio_button_tag("Alarm Frequency", 14) %>
-   		<%= label_tag("Monthly:")%>
-   		<%=radio_button_tag("Alarm Frequency", 30) %>
-   		<%= label_tag("Bi-Monthly:")%>
-   		<%=radio_button_tag("Alarm Frequency", 60) %>
-   	</div>
-   	
-   	<br>
-   	
-   	<h3>Alarm Date and Time</h3>
-   	<br>
+             <br>
+         
+          <%= f.select :freq, Alarm::FREQUENCIES %>
+          <br>
+          # of Alerts <%= f.select :count, (1..12) %> (If more than once)
+        </div>
+      
+        <br>
+      
+        <h3>Alert Date and Time</h3>
+        <br>
 
-   	<div>
-   		<%= label_tag("Month")%>
-   		<%= select_month(Date.today)%>
-   		<%= label_tag("Day")%>
-   		<%= select_day(Time.now)%>
-   		<%= label_tag("Year")%>
-		<%= select_year(Date.today, start_year: Time.now.year)%>
-		<br>
-		<br>
-		<%= label_tag("Hour")%>
-   		<%= select_hour(Time.now)%>
-   		<%= label_tag("Minute")%>
-   		<%= select_minute(Time.now)%>
-   	</div>
+        <div>
+          <%= label_tag("Month")%>
+          <%= f.select :month, (1..12).collect{|m| [Date::MONTHNAMES[m], m]}, selected: Date.today.month%>
+          <%= label_tag("Day")%>
+          <%= f.select :day, 1..Time.days_in_month(Time.now.month, Time.now.year), selected: Time.now.day%>
+          <%= label_tag("Year")%>
+          <%= f.select(:year, (Time.now.year..Time.now.year+10), selected: Time.now.year)%>
+       <br>
+       <br>
+         <%= label_tag("Hour")%>
+         <%= f.select :hour, (1..24), selected: Time.now.hour %>
+         <%= label_tag("Minute")%>
+         <%= f.select :minute, (1..59), selected: Time.now.strftime("%M").to_d.to_int %>
+        </div>
 
-   	<br>
-   	<br>
+        <br>
+        <br>
 
-   	<h3>Alarm Contact</h3>
-   	<br>
-   	<div>
-   		<%= text_field_tag("Phone#/Email", nil,{placeholder: "Enter Phone# or Email"})%>
-   		<br>
-   		<br>
-   		<%= button_tag "Create Alarm", class: "submit"%>
-   	</div>
+        <h3>Alert Contact</h3>
+        <br>
+        <div>
+          <%= f.text_field(:contact, {placeholder: "Enter Phone# or Email"})%>
+          <br>
+          Carrier: <%= f.select :network_provider, Alarm::NETWORK_PROVIDERS %>(if cell phone #)
+          <br>
+          <%= f.submit "Create Alarm", class: "submit"%>
+        </div>
+      <% end %>
    </td>
   </tr>
 </table>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  freq: MyString
+  count: 
+  date: 2013-12-09 17:19:14
+  contact: MyString
+  network_provider: MyString
+
+two:
+  freq: MyString
+  count: 
+  date: 2013-12-09 17:19:14
+  contact: MyString
+  network_provider: MyString
