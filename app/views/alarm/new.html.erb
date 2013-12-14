@@ -24,7 +24,7 @@
          
           <%= select_tag :freq, Alarm::FREQUENCIES %>
           <br>
-          # of Alerts <%= f.select :count, (1..12) %> (If more than once)
+          # of Alerts <%= select_tag :count, (1..12) %> (If more than once)
         </div>
       
         <br>
