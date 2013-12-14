@@ -53,7 +53,7 @@
         <h3>Alert Contact</h3>
         <br>
         <div>
-          <%= text_field_tag(:contact, {placeholder: "Enter Phone# or Email"})%>
+          <%= text_field_tag(:contact)%>
           <br>
           Carrier: <%= select_tag :network_provider, Alarm::NETWORK_PROVIDERS %>(if cell phone #)
           <br>
