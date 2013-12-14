@@ -23,14 +23,4 @@ ActiveRecord::Schema.define(version: 20131209221914) do
     t.datetime "updated_at"
   end
 
-  create_table "alerts", force: true do |t|
-    t.string   "freq"
-    t.integer  "count"
-    t.datetime "date"
-    t.string   "contact"
-    t.string   "network_provider"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end

@@ -2,7 +2,7 @@
 
 <% if @params[:street].nil? %>
   <div style="width:100%;border:1px solid black;">
-    <div style="width:45%;float:left;padding:5px;">
+    <div style="width:45%;float:left;padding:5px;border-right:1px solid black">
       <p><b>Source:</b> Route 32, Studio Arts Building
       <p><b>Destination:</b> Route 32, North Amherst<br>
 
@@ -34,7 +34,7 @@
       <%= button_to "Make Another Search", :back, method: :get, class: "submit" %>
       <%= button_to "Schedule an Alert", new_alarm_url, method: :get, class: "submit" %>
     </div>
-    <div style="width:45%;float:left;padding:5px;border-left:1px solid black">
+    <div style="width:45%;float:left;padding:5px;">
       <h2>Route 31, 32, 45</h2>
       <%= image_tag("bstbs.png", width: '400', style: "margin-left:auto;margin-right:auto") %>
     </div>
@@ -45,8 +45,8 @@
 <% else %>
   <div style="width:100%;border:1px solid black;">
     <div style="width:45%;border-right:1px solid black;float:left;padding:5px;">
-      <p><b>Source:</b> Studio Arts Building, Amherst MA, 01003<br>
-      <p><b>Destination:</b> 61 Pine St, Amherst MA, 01003<br>
+      <p><b>Source:</b> Studio Arts Building, Amherst MA, 01002<br>
+      <p><b>Destination:</b> 61 Pine St, Amherst MA, 01002<br>
 
       <h2>Directions</h2>
       <table border style="float:left;">
@@ -78,13 +78,13 @@
         <tr>
           <td></td>
           <td><b>Total Time</b></td>
-          <td> Minutes</td>
+          <td> 31 Minutes</td>
         </tr>
       </table>
 
       <br><br>
-      <%= button_to "Make Another Search", :back, method: :get %>
-      <%= button_to "Schedule an Alert", new_alarm_url, method: :get %>
+      <%= button_to "Make Another Search", :back, method: :get, class: "submit" %>
+      <%= button_to "Schedule an Alert", new_alarm_url, method: :get, class: "submit" %>
     </div>
     <div style="width:45%;float:left;padding:5px;">
       <h2>Route 31, 32, 45</h2>
