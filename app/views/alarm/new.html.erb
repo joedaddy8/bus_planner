@@ -15,7 +15,7 @@
    		<%= button_to "Back", :back, method: :get %>
    </td>
    <td style="width:50%;vertical-align:top">
-      <%= form_tag(url: alarm_index_path)%>	 
+      <%= form_tag(alarm_index_path) do%>	 
        <br>
         <div>
           <h3>Alert Frequency</h3>
