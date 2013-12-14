@@ -4,7 +4,7 @@
    <td style="height:400px;border-right:1px solid black;width:50%;vertical-align:top;padding-top:5px">
    	<br>
    	<h2>Bus Schedule Information</h2>
-      <%= @alarm.date%>
+      <%= Date.today%>
    	   	<br>
    		<br>
 
@@ -15,7 +15,7 @@
    		<%= button_to "Back", :back, method: :get %>
    </td>
    <td style="width:50%;vertical-align:top">
-      <%= form_for(@alarm, url: alarm_index_path) do |f|%>	 
+      <%= form_tag(url: alarm_index_path)%>	 
        <br>
         <div>
           <h3>Alert Frequency</h3>
@@ -34,17 +34,17 @@
 
         <div>
           <%= label_tag("Month")%>
-          <%= f.select :month, (1..12).collect{|m| [Date::MONTHNAMES[m], m]}, selected: Date.today.month%>
+          <%= select_tag :month, (1..12).collect{|m| [Date::MONTHNAMES[m], m]}, selected: Date.today.month%>
           <%= label_tag("Day")%>
-          <%= f.select :day, 1..Time.days_in_month(Time.now.month, Time.now.year), selected: Time.now.day%>
+          <%= select_tag :day, 1..Time.days_in_month(Time.now.month, Time.now.year), selected: Time.now.day%>
           <%= label_tag("Year")%>
-          <%= f.select(:year, (Time.now.year..Time.now.year+10), selected: Time.now.year)%>
+          <%= select_tag(:year, (Time.now.year..Time.now.year+10), selected: Time.now.year)%>
        <br>
        <br>
          <%= label_tag("Hour")%>
-         <%= f.select :hour, (1..24), selected: Time.now.hour %>
+         <%= select_tag :hour, (1..24), selected: Time.now.hour %>
          <%= label_tag("Minute")%>
-         <%= f.select :minute, (1..59), selected: Time.now.strftime("%M").to_d.to_int %>
+         <%= select_tag :minute, (1..59), selected: Time.now.strftime("%M").to_d.to_int %>
         </div>
 
         <br>
@@ -53,9 +53,9 @@
         <h3>Alert Contact</h3>
         <br>
         <div>
-          <%= f.text_field(:contact, {placeholder: "Enter Phone# or Email"})%>
+          <%= text_field_tag(:contact, {placeholder: "Enter Phone# or Email"})%>
           <br>
-          Carrier: <%= f.select :network_provider, Alarm::NETWORK_PROVIDERS %>(if cell phone #)
+          Carrier: <%= select_tag :network_provider, Alarm::NETWORK_PROVIDERS %>(if cell phone #)
           <br>
           <%= f.submit "Create Alarm", class: "submit"%>
         </div>
