@@ -13505,3 +13505,46 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-09 22:19:16
 
 
 Started GET "/assets/lgrc.png" for 127.0.0.1 at 2013-12-09 22:19:16 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-14 17:00:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlanRouteController#bstbs as HTML
+  Rendered plan_route/bstbs.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 168ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/jquery-1.10.2.min.js?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/alarm.js?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/plan_route.js?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/stops.js?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/plan_route.css?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
+
+
+Started GET "/assets/stops.css?body=1" for 127.0.0.1 at 2013-12-14 17:00:30 -0500
