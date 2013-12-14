@@ -22,7 +22,7 @@
 
              <br>
          
-          <%= f.select :freq, Alarm::FREQUENCIES %>
+          <%= select_tag :freq, Alarm::FREQUENCIES %>
           <br>
           # of Alerts <%= f.select :count, (1..12) %> (If more than once)
         </div>
@@ -57,7 +57,7 @@
           <br>
           Carrier: <%= select_tag :network_provider, Alarm::NETWORK_PROVIDERS %>(if cell phone #)
           <br>
-          <%= f.submit "Create Alarm", class: "submit"%>
+          <%= submit_tag "Create Alarm", class: "submit"%>
         </div>
       <% end %>
    </td>
