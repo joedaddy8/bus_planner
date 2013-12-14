@@ -25,7 +25,7 @@ BusApp::Application.configure do
   config.assets.compile = false
   # Generate digests for assets URLs
   config.assets.digest = true
-  config.assets.prefix = "/assets"
+  config.assets.prefix = "/assets/assets"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
